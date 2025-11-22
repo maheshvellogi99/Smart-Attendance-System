@@ -1,7 +1,9 @@
 # Smart Attendance System
 
 A computer-vision–based attendance system that uses **face recognition** with a **QR / barcode fallback** to mark student attendance. Attendance is stored both **locally in an Excel sheet** and **remotely in Firebase Realtime Database**, with **audio confirmations** via text‑to‑speech.
+
 This project is intended for classroom / lab environments where each student has a unique ID (on an ID card as QR/barcode) and a registered face image.
+
 ---
 ## Features
 - **Face recognition–based attendance**  
@@ -24,7 +26,9 @@ This project is intended for classroom / lab environments where each student has
   Face encodings are stored in `face_encodings.pkl` and reference images in `registered_faces/` for reuse across runs.
 - **Error logging**  
   Errors (e.g., issues updating Firebase or saving Excel) are appended to `error_log.txt` for debugging.
+
 ---
+
 ## Tech Stack
 - **Language:** Python 3
 - **Computer Vision:** OpenCV (`opencv-python`)
@@ -35,7 +39,9 @@ This project is intended for classroom / lab environments where each student has
 - **Barcode / QR:** `pyzbar`, OpenCV QRCode detector
 - **Text-to-Speech:** `pyttsx3`
 All Python dependencies are listed in `requirements.txt`.
+
 ---
+
 ## Project Structure
 
 ```text
