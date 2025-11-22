@@ -309,5 +309,4 @@ You should see console output similar to:
 ---
 
 ## License
-
-Specify your preferred license here (e.g., MIT, Apache 2.0) before publishing to GitHub.
+This project is licensed under the MIT License - see the LICENSE file for details.
