@@ -1,45 +1,31 @@
 # Smart Attendance System
 
 A computer-vision–based attendance system that uses **face recognition** with a **QR / barcode fallback** to mark student attendance. Attendance is stored both **locally in an Excel sheet** and **remotely in Firebase Realtime Database**, with **audio confirmations** via text‑to‑speech.
-
 This project is intended for classroom / lab environments where each student has a unique ID (on an ID card as QR/barcode) and a registered face image.
-
 ---
-
 ## Features
-
 - **Face recognition–based attendance**  
   Recognizes registered student faces from the webcam using the `face_recognition` library.
-
 - **QR / barcode fallback**  
   If a face is not recognized, the system prompts the user to scan a QR code or barcode (e.g., on an ID card) to register and/or mark attendance.
-
 - **Automatic student registration**  
   When a new code is scanned, the captured face image is associated with that ID and stored for future recognition.
-
 - **Excel-based attendance log**  
   Attendance is recorded in `attendance.xlsx` with:
   - `Student ID`
   - `Year`
   - `Registration Date`
   - One column per date, with the **time** at which attendance was marked.
-
 - **Cloud sync with Firebase Realtime Database**  
   Attendance records are also pushed to Firebase under structured paths for both **date-wise** and **student-wise** lookup.
-
 - **Audio feedback (text‑to‑speech)**  
   Uses `pyttsx3` to announce events such as unrecognized faces and successful attendance marking.
-
 - **Persistent face encodings**  
   Face encodings are stored in `face_encodings.pkl` and reference images in `registered_faces/` for reuse across runs.
-
 - **Error logging**  
   Errors (e.g., issues updating Firebase or saving Excel) are appended to `error_log.txt` for debugging.
-
 ---
-
 ## Tech Stack
-
 - **Language:** Python 3
 - **Computer Vision:** OpenCV (`opencv-python`)
 - **Face Recognition:** `face-recognition`, `dlib`, `face-recognition-models`
@@ -48,11 +34,8 @@ This project is intended for classroom / lab environments where each student has
   - Cloud: Firebase Realtime Database via `firebase-admin`
 - **Barcode / QR:** `pyzbar`, OpenCV QRCode detector
 - **Text-to-Speech:** `pyttsx3`
-
 All Python dependencies are listed in `requirements.txt`.
-
 ---
-
 ## Project Structure
 
 ```text
